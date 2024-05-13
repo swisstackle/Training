@@ -1,6 +1,17 @@
 # Ignore everything
 *
+*
 
-# But don't ignore .vhd files
-!*.vhd
-!*.gitignore
+# Don't ignore directories
+!*/
+
+# Don't ignore .vhd files in any directory
+!**/*.vhd
+# Ignore everything
+*
+
+# Don't ignore directories
+!*/
+
+# Don't ignore .vhd files in any directory
+!**/*.vhd

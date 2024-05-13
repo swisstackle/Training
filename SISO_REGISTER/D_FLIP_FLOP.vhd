@@ -29,3 +29,4 @@ Q_BAR <= and_gate1_output nor Q;
 
 end Behavioral;
 
+
