@@ -55,7 +55,7 @@ begin
     DL1 : D_LATCH
         port map (
             I => Din,
-            CLK => not CLKin,
+            CLK => not(CLKin),
             Q => inter_signal1,
             Q_BAR => not_output_signal1
         );

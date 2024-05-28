@@ -32,27 +32,40 @@ begin
     begin
         -- hold reset state for 100 ns.
         wait for 100 ns;  
+    input_signal <= '1';
+    clock_signal <= '0';
+    wait for 10 ns;
 
-        input_signal <= '1';  -- Set input
-        wait for 10 ns;  -- Wait time
-        clock_signal <= '1';  -- Clock pulse
+    -- toggle clock and input
+    for i in 1 to 2 loop
+        clock_signal <= not clock_signal;
         wait for 10 ns;
-        clock_signal <= '0';
+    end loop;
+	 wait for 10 ns;
+    input_signal <= '1';
+	 wait for 10 ns;
+    for i in 1 to 2 loop
+        clock_signal <= not clock_signal;
         wait for 10 ns;
+    end loop;
+	 wait for 10 ns;
 
-        input_signal <= '0';  -- Set input
-        wait for 10 ns;  -- Wait time
-        clock_signal <= '1';  -- Clock pulse
+    input_signal <= '1';
+	 wait for 10 ns;
+    for i in 1 to 2 loop
+        clock_signal <= not clock_signal;
         wait for 10 ns;
-        clock_signal <= '0';
-        wait for 10 ns;
+    end loop;
+	 
+	 	 wait for 10 ns;
 
-        input_signal <= '1';  -- Set input
-        wait for 10 ns;  -- Wait time
-        clock_signal <= '1';  -- Clock pulse
+    input_signal <= '0';
+	 wait for 10 ns;
+    for i in 1 to 2 loop
+        clock_signal <= not clock_signal;
         wait for 10 ns;
-        clock_signal <= '0';
-
+    end loop;
+	 
         wait;
     end process;
 end Behavioral;
