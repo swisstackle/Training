@@ -1,0 +1,1 @@
+In this repo I implement a bunch of digital electronic components with VHDL. I start with the most basic components (implemented solely with logic gates) and then work myself up to more complex ones by combining the basic ones (lego block mentality).
